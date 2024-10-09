@@ -1,0 +1,34 @@
+[
+    {
+        "title": "[SS674:2021] Singapore Standard ",
+        "filename": "../data/SS 674-2021.pdf"
+    },
+    {
+        "title": "[ACES-BCA] Design Guide for Fibre-Reinforced Concrete Structures to Singapore Standard SS674:2021",
+        "filename": "../data/ACES Design Guide FRC (SS 674-2021) 2022.pdf"
+    },
+    {
+        "title": "[LTA Particular Specification] Steel Fibre Reinforced Concrete (SFRC) and Hybrid Segmental Lining",
+        "filename": "../data/LTA-PS-CRL2-Cluster2/20230525_PS Clause XX - SFRC Segmental Lining-for CRL2 Cluster2 - to_PJT.pdf"
+    },
+    {
+        "title": "[LTA Particular Specification] Design Requirements",
+        "filename": "../data/LTA-PS-CRL2-Cluster2/20230525_PS Clause 09_Design Requirements- to_PJT-edited.pdf"
+    },
+    {
+        "title": "[LTA Particular Specification] Steel Fibre Reinforced Concrete (SFRC) for In-situ Casting",
+        "filename": "../data/LTA-PS-CRL2-Cluster2/20230525_PS App XX_SFRC Cast In-situ Structure-for CRL2 Cluster2 - to_PJT.pdf"
+    },
+    {
+        "title": "[EN 14721] Test method for metallic fibre concrete - Measuring the fibre content in fresh and hardened concrete",
+        "filename": "../data/QAQC/EN14721.pdf"
+    },
+    {
+        "title": "[EN 14651] Test method for metallic fibered concrete - Measuring the flexural tensile strength",
+        "filename": "../data/QAQC/EN14651.pdf"
+    },
+    {
+        "title": "[UNE 83515] Barcelona Test - Test method for determining the cracking strength, ductility and residual tensile strength of fibre reinforced concrete",
+        "filename": "../data/QAQC/prUNE 83515.pdf"
+    }
+]
