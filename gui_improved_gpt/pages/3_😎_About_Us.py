@@ -17,7 +17,7 @@ if not check_password():
 # ---------------------------------------------------------------------
 
 # load resources_full.json into a python dict (mapping each filename to its document title)
-folder_path = 'gui/st_data'
+folder_path = 'gui_improved_gpt/st_data'
 filename = 'resources_full.json'
 file_path = os.path.join(folder_path, filename)
 with open(file_path) as f:

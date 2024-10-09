@@ -46,8 +46,8 @@ with st.expander("Techniques used to improve the chatbot performance:: ", expand
         """)
 
 st.write("Standard Chatbot Flowchart:")
-st.image("gui/image/standard_chatbot_flowchart.png")
+st.image("gui_improved_gpt/image/standard_chatbot_flowchart.png")
 st.write("  ")
 st.write("Improved Chatbot Flowchart:")
-st.image("gui/image/improved_chatbot_flowchart.png")
+st.image("gui_improved_gpt/image/improved_chatbot_flowchart.png")
 
