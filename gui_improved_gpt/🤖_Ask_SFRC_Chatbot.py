@@ -63,8 +63,8 @@ llm = ChatOpenAI(
     api_key=os.environ["OPENAI_API_KEY_GOVTECH"],
     openai_api_base="https://litellm.govtext.gov.sg/",
     default_headers={"user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/81.0"},
-    # model = "gpt-4o-prd-gcc2-lb", 
-    model = "gpt-4o-mini-prd-gcc2-lb",
+    model = "gpt-4o-prd-gcc2-lb", 
+    # model = "gpt-4o-mini-prd-gcc2-lb",
     temperature=0,
     seed=42,
     )
