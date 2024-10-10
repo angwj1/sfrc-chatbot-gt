@@ -48,34 +48,35 @@ if not check_password():
 
 ####### SET-UP #######
 # # set up openai api key and cohere api key
-# os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY_GOVTECH']
-# os.environ['COHERE_API_KEY'] = st.secrets['COHERE_API_KEY']
-# # embedding model that we will use for the session
-# embeddings_model = OpenAIEmbeddings(
-#     api_key=os.environ["OPENAI_API_KEY_GOVTECH"],
-#     openai_api_base="https://litellm.govtext.gov.sg/",
-#     default_headers={"user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/81.0"},        # model='text-embedding-3-large-prd-gcc2-lb', 
-#     model='text-embedding-3-small-prd-gcc2-lb'
-#     )
-
-# # llm to be used in RAG pipeplines in this notebook
-# llm = ChatOpenAI(
-#     api_key=os.environ["OPENAI_API_KEY_GOVTECH"],
-#     openai_api_base="https://litellm.govtext.gov.sg/",
-#     default_headers={"user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/81.0"},
-#     model = "gpt-4o-prd-gcc2-lb", 
-#     # model = "gpt-4o-mini-prd-gcc2-lb",
-#     temperature=0,
-#     seed=42,
-#     )
-
-# set up openai api key and cohere api key
-os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
+os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY_GOVTECH']
 os.environ['COHERE_API_KEY'] = st.secrets['COHERE_API_KEY']
 # embedding model that we will use for the session
-embeddings_model = OpenAIEmbeddings(model='text-embedding-3-small')
+embeddings_model = OpenAIEmbeddings(
+    api_key=os.environ["OPENAI_API_KEY_GOVTECH"],
+    openai_api_base="https://litellm.govtext.gov.sg/",
+    default_headers={"user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/81.0"},        # model='text-embedding-3-large-prd-gcc2-lb', 
+    model='text-embedding-3-small-prd-gcc2-lb'
+    )
+
 # llm to be used in RAG pipeplines in this notebook
-llm = ChatOpenAI(model='gpt-4o-mini', temperature=0)
+llm = ChatOpenAI(
+    api_key=os.environ["OPENAI_API_KEY_GOVTECH"],
+    openai_api_base="https://litellm.govtext.gov.sg/",
+    default_headers={"user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/81.0"},
+    model = "gpt-4o-prd-gcc2-lb", 
+    # model = "gpt-4o-mini-prd-gcc2-lb",
+    temperature=0,
+    seed=42,
+    )
+
+# set up openai api key and cohere api key
+# os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
+# os.environ['COHERE_API_KEY'] = st.secrets['COHERE_API_KEY']
+# # embedding model that we will use for the session
+# embeddings_model = OpenAIEmbeddings(model='text-embedding-3-small')
+# # llm to be used in RAG pipeplines in this notebook
+# llm = ChatOpenAI(model='gpt-4o-mini', temperature=0)
+
 # COHERE client to be used for cross-encoder reranking
 co = cohere.Client()
 
