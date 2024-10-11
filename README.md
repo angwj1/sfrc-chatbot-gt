@@ -2,8 +2,8 @@
 
 ## CHANGES MADE:
 - Use GovTech API key
-- Use GPT-4o (instead of GPT-4o-mini)
-- Stick with text-embedding-3-small-prd-gcc2-lb (instead of upgrading to text-embedding-3-large due to better response -- weird)
+- Use GPT-4o (instead of GPT-4o-mini) to generate llm response
+- Use text-embedding-3-large (instead of text-embedding-3-small-prd-gcc2-lb and Text-embedding-ada-002-v2) to generate vector embeddings and retrieve the relevant chunks, perform semantic chunking
 
 ## Problem Statement
 Implementation of steel fibre reinforced concrete (SFRC) in underground infrastructure is new to most engineers. There are a series of new documents published recently, and engineers might not have the time/capacity to run through all these documents. However, it is important that they have a clear understanding of these documents because they have to review Contractor's proposal and safeguard agency's interests. 

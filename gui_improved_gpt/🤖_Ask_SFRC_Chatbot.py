@@ -54,8 +54,9 @@ os.environ['COHERE_API_KEY'] = st.secrets['COHERE_API_KEY']
 embeddings_model = OpenAIEmbeddings(
     api_key=os.environ["OPENAI_API_KEY_GOVTECH"],
     openai_api_base="https://litellm.govtext.gov.sg/",
-    default_headers={"user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/81.0"},        # model='text-embedding-3-large-prd-gcc2-lb', 
-    model='text-embedding-3-small-prd-gcc2-lb'
+    default_headers={"user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/81.0"},        
+    model='text-embedding-3-large-prd-gcc2-lb', 
+    # model='text-embedding-3-small-prd-gcc2-lb',
     )
 
 # llm to be used in RAG pipeplines in this notebook
@@ -88,7 +89,7 @@ if not load_dotenv(override=True): # only apply the following code to use pysqli
     # https://discuss.streamlit.io/t/issues-with-chroma-and-sqlite/47950/4
 vectordb = Chroma(
     embedding_function=embeddings_model,
-    collection_name="semantic_splitter", # one database can have multiple collections
+    collection_name="semantic_splitter_improved_embeddings", # one database can have multiple collections
     persist_directory="gui_improved_gpt/st_output/vector_db"
 )
 # Set up vector search 
@@ -96,7 +97,7 @@ vectorstore_retriever = vectordb.as_retriever(search_kwargs={"k": 20})
 
 # load bm25 object
 folder_path = 'gui_improved_gpt/st_output/bm25/'
-file_name = 'semantic_bm25'
+file_name = 'semantic_bm25_improved_embeddings'
 file_path = os.path.join(folder_path, file_name)
 with open(file_path, 'rb') as bm25result_file:
     keyword_retriever = pickle.load(bm25result_file)
