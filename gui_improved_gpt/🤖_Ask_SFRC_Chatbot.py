@@ -74,7 +74,7 @@ if not check_password():
 os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
 os.environ['COHERE_API_KEY'] = st.secrets['COHERE_API_KEY']
 # embedding model that we will use for the session
-embeddings_model = OpenAIEmbeddings(model='text-embedding-3-small')
+embeddings_model = OpenAIEmbeddings(model='text-embedding-3-large')
 # llm to be used in RAG pipeplines in this notebook
 llm = ChatOpenAI(model='gpt-4o-mini', temperature=0)
 
