@@ -37,7 +37,7 @@ def setup():
 
     # embedding model that we will use for the session
     embeddings_model = OpenAIEmbeddings(
-        api_key=os.environ["OPENAI_API_KEY_GOVTECH"],
+        api_key=os.environ["OPENAI_API_KEY"],
         openai_api_base="https://litellm.govtext.gov.sg/",
         default_headers={"user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/81.0"},
         model='text-embedding-3-large-prd-gcc2-lb', 
@@ -46,7 +46,7 @@ def setup():
 
     # llm to be used in RAG pipeplines in this notebook
     llm = ChatOpenAI(
-        api_key=os.environ["OPENAI_API_KEY_GOVTECH"],
+        api_key=os.environ["OPENAI_API_KEY"],
         openai_api_base="https://litellm.govtext.gov.sg/",
         default_headers={"user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/81.0"},
         model = "gpt-4o-prd-gcc2-lb", 
