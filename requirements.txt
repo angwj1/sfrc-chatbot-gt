@@ -20,6 +20,10 @@ rank-bm25==0.2.2
 seaborn==0.13.2
 protobuf==3.20.1
 # protobuf==4.25.4
+
+# pysqlite3-binary==0.5.3
+# pysqlite-binary==0.5.1.3380300
+pysqlite3==0.5.3
 # pysqlite3-binary # for streamlit to work - https://discuss.streamlit.io/t/issues-with-chroma-and-sqlite/47950/4
 
 # openai==1.42.0

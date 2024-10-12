@@ -1,9 +1,9 @@
-# from dotenv import load_dotenv 
-# if not load_dotenv(override=True): # only apply the following code to use pysqlite3 if not running in local machine (i.e. run on streamlit community cloud)
-#     __import__('pysqlite3')
-#     import sys,os
-#     sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
-#     # https://discuss.streamlit.io/t/issues-with-chroma-and-sqlite/47950/4
+from dotenv import load_dotenv 
+if not load_dotenv(override=True): # only apply the following code to use pysqlite3 if not running in local machine (i.e. run on streamlit community cloud)
+    __import__('pysqlite3')
+    import sys,os
+    sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+    # https://discuss.streamlit.io/t/issues-with-chroma-and-sqlite/47950/4
 
 import streamlit as st
 # import os
@@ -47,7 +47,7 @@ if not check_password():
 
 
 ####### SET-UP #######
-# # set up openai api key and cohere api key
+# # # set up openai api key and cohere api key
 os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY_GOVTECH']
 os.environ['COHERE_API_KEY'] = st.secrets['COHERE_API_KEY']
 # embedding model that we will use for the session
@@ -82,11 +82,11 @@ llm = ChatOpenAI(
 co = cohere.Client()
 
 # load vector database
-# if not load_dotenv(override=True): # only apply the following code to use pysqlite3 if not running in local machine (i.e. run on streamlit community cloud)
-#     __import__('pysqlite3')
-#     import sys
-#     sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
-#     # https://discuss.streamlit.io/t/issues-with-chroma-and-sqlite/47950/4
+if not load_dotenv(override=True): # only apply the following code to use pysqlite3 if not running in local machine (i.e. run on streamlit community cloud)
+    __import__('pysqlite3')
+    import sys
+    sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+    # https://discuss.streamlit.io/t/issues-with-chroma-and-sqlite/47950/4
 vectordb = Chroma(
     embedding_function=embeddings_model,
     collection_name="semantic_splitter_improved_embeddings", # one database can have multiple collections
